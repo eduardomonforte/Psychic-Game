@@ -1,6 +1,6 @@
 // Just so I know the file is linked!
 
-console.log("It's working!");
+console.log("Cheaters don't look inside the console!");
 
 //Pseudo-Code
 
@@ -22,7 +22,6 @@ document.getElementById("guesses-left").innerHTML = guesses;
 
 // This array contains all the letters in the alphabet, each one as a string.
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-console.log(letters);
 
 // This function randomly chooses a letter inside the letters array.
 
@@ -44,7 +43,7 @@ document.onkeyup = function(event){
     if (playerChoice === chosenLetter) {
         winScore++;
         document.getElementById("win-score").innerHTML = winScore;
-        console.log("I won!");
+        console.log("You won!");
         document.getElementById("guesses-so-far").innerHTML = "";
         guesses = 13;
         document.getElementById("guesses-left").innerHTML = guesses;
@@ -59,12 +58,11 @@ document.onkeyup = function(event){
     if (guesses === 0) {
         lossScore++;
         document.getElementById("loss-score").innerHTML = lossScore;
-        console.log ("I lost!");
+        console.log ("You lost!");
         document.getElementById("guesses-so-far").innerHTML = "";
         guesses = 13;
         document.getElementById("guesses-left").innerHTML = guesses;
         chosenLetter = letters[Math.floor(Math.random() * letters.length)];
         console.log("New hidden letter: " + chosenLetter);
     }
-
 }
