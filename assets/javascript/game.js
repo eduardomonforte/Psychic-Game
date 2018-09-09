@@ -33,8 +33,8 @@ document.onkeyup = function(event){
 
 
     var playerChoice = event.key;
-    var guessesSoFar = playerChoice + "!";
-    document.getElementById("guesses-so-far").innerHTML = guessesSoFar;
+    document.getElementById("guesses-so-far").append(event.key + " ");
+    document.getElementById("guesses-so-far").innerHTML;
 
     // A little test to see if the listener works.
 
@@ -46,6 +46,7 @@ document.onkeyup = function(event){
         winScore++;
         document.getElementById("win-score").innerHTML = winScore;
         console.log("I won!");
+        document.getElementById("guesses-so-far").innerHTML = "";
         guesses = 13;
         document.getElementById("guesses-left").innerHTML = guesses;
         chosenLetter = letters[Math.floor(Math.random() * letters.length)];
@@ -60,6 +61,7 @@ document.onkeyup = function(event){
         lossScore++;
         document.getElementById("loss-score").innerHTML = lossScore;
         console.log ("I lost!");
+        document.getElementById("guesses-so-far").innerHTML = "";
         guesses = 13;
         document.getElementById("guesses-left").innerHTML = guesses;
         chosenLetter = letters[Math.floor(Math.random() * letters.length)];
