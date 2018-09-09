@@ -31,8 +31,10 @@ console.log("First hidden letter: " + chosenLetter);
 
 document.onkeyup = function(event){
 
+
     var playerChoice = event.key;
-    document.getElementById("guesses-so-far").innerHTML = playerChoice;
+    var guessesSoFar = playerChoice + "!";
+    document.getElementById("guesses-so-far").innerHTML = guessesSoFar;
 
     // A little test to see if the listener works.
 
@@ -44,6 +46,8 @@ document.onkeyup = function(event){
         winScore++;
         document.getElementById("win-score").innerHTML = winScore;
         console.log("I won!");
+        guesses = 13;
+        document.getElementById("guesses-left").innerHTML = guesses;
         chosenLetter = letters[Math.floor(Math.random() * letters.length)];
         console.log("New hidden letter: " + chosenLetter);
     }
