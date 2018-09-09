@@ -32,6 +32,7 @@ console.log("First hidden letter: " + chosenLetter);
 document.onkeyup = function(event){
 
     var playerChoice = event.key;
+    document.getElementById("guesses-so-far").innerHTML = playerChoice;
 
     // A little test to see if the listener works.
 
