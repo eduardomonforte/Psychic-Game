@@ -31,9 +31,8 @@ console.log("First hidden letter: " + chosenLetter);
 
 document.onkeyup = function(event){
 
-
-    var playerChoice = event.key;
-    document.getElementById("guesses-so-far").append(event.key + " ");
+    var playerChoice = event.key.toLowerCase();
+    document.getElementById("guesses-so-far").append(event.key.toLowerCase() + " ");
     document.getElementById("guesses-so-far").innerHTML;
 
     // A little test to see if the listener works.
